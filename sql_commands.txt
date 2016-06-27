@@ -1,0 +1,19 @@
+Mike Malleske
+
+nba_db=# SELECT * FROM players  WHERE team = 'NYK';
+
+nba_db=# SELECT * FROM players  WHERE team = 'IND' AND age < 26;
+
+nba_db=# SELECT * FROM players ORDER BY points ASC;
+
+nba_db=# SELECT name, (points/games) FROM players ORDER BY points DESC LIMIT 20;
+
+nba_db=# SELECT AVG(age) FROM players;
+
+nba_db=# SELECT AVG(age) FROM players WHERE team = 'OKC';
+
+nba_db=# SELECT AVG(age) FROM players WHERE games > 40;
+
+nba_db=# SELECT team, SUM(players.points) FROM players GROUP BY team ORDER BY SUM(players.points) DESC;
+
+
